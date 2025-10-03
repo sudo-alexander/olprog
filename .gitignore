@@ -1,0 +1,23 @@
+# C/C++
+*.o
+*.exe
+*.out
+*.obj
+*.dll
+*.so
+*.dylib
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Системные
+.DS_Store
+Thumbs.db
