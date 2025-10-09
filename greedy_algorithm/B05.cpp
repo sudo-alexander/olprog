@@ -27,14 +27,6 @@ int main(){
             res += 1;
         }
     }
-    /*
-    int res = 0;
-    for (int i = 0; i < v.size(); i++){
-        if (v[i] != i + 1){
-            res++;
-        }
-    }
-    */
     cout << res << endl;
     return 0;
 }
