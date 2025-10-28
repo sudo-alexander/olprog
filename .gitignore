@@ -1,27 +1,63 @@
-# C/C++
-*.o
-*.exe
-*.out
-*.obj
-*.dll
-*.so
-*.dylib
+# Игнорировать все файлы по умолчанию
+*
+
+# Разрешить папки
+!*/
+
+# Разрешить исходные коды и конфигурационные файлы
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!*.py
+!*.java
+!*.js
+!*.ts
+!*.rs
+!*.go
+!*.sh
+!*.json
+!*.yaml
+!*.yml
+!*.toml
+!*.ini
+!*.md
+!*.txt
+!.gitignore
 
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
+*.pyd
 .venv/
 venv/
 
-# VS Code
+# VS Code и IDE
 .vscode/
+.idea/
 *.code-workspace
 
-# Системные
+# Системные файлы
 .DS_Store
 Thumbs.db
 
-# Игнорировать все файлы без расширения
-*.
-!*.*
+
+# Временные и резервные файлы
+*.swp
+*.swo
+*.tmp
+*.bak
+*.log
+
+# Файлы сборки и бинарники
+*.out
+*.obj
+*.o
+*.exe
+*.dll
+*.so
+*.dylib
+/bin/
+build/
+dist/
