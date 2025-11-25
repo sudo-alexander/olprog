@@ -1,26 +1,31 @@
-#include <iostream>
-#include <vector>
-#include <math.h>
-
-using namespace std;
-
-void f(vector<int>& v){
-    v[1] = 0;
-    for (long long i = 2; i < v.size(); ++i){
-        for (long long j = i * 2; j < v.size(); j += i){
-            v[j] = 0;
+    #include <iostream>
+    #include <math.h>
+     
+    using namespace std;
+     
+    bool is_prime(long long n){
+        if (n == 1){
+            return false;
         }
+        if (n == 2){
+            return true;
+        }
+        for (long long i = 2; i <= pow(n, 0.5); i++){
+            if (n % i == 0){
+                return false;
+            }
+        }
+        return true;
     }
-    return;
-}
-
-int main(){
-    long long n = 0;
-    cin >> n;
-    vector<int> v(n + 1, 1);
-    f(v);
-    for (long long i = 1; i < v.size(); i++){
-        printf("%d ", v[i]);
+     
+    int main(){
+        long long n = 0;
+        cin >> n;
+        for (long long i = n + 1; i <= pow(10, 13); i++){
+            if (is_prime(i)){
+                cout << i << endl;
+                break;
+            }
+        }
+        return 0;
     }
-    return 0;
-}
